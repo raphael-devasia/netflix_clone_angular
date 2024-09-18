@@ -1,0 +1,6 @@
+<app-header></app-header>
+<app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title" [bannerOverview]="(bannerDetail$ | async)?.overview"
+    [key]="(bannerVideo$ | async)?.results[0].key" />
+<app-movie-corousal [videoContents]="movies" [title]="'Popular on Netflix'"    ></app-movie-corousal>
+
+<app-movie-corousal [videoContents]="tvShows" [title]="'Trending TV shows'" ></app-movie-corousal>
